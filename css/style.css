@@ -91,3 +91,38 @@ footer{padding:2.5rem 0;border-top:1px solid #e6edf3;color:#55616d;background:#f
   .nav a.btn{display:none}
   .hero{padding:3.5rem 0 2rem}
 }
+
+/* ===== Overrides & polish (2025-08-24) ===== */
+
+/* Hero image polish */
+.hero-card img{
+  width:100%;
+  height:auto;
+  border-radius:16px;
+  display:block;
+  box-shadow:0 8px 30px rgba(0,0,0,.06);
+}
+
+/* Process step number alignment */
+.step:before{
+  top:.75rem;
+  left:.75rem;
+  font-weight:700;
+}
+
+/* Keep nav buttons visible on small screens and allow wrapping */
+@media (max-width:640px){
+  .nav{flex-wrap:wrap; gap:.5rem;}
+  .nav a.btn{display:inline-block; flex:1 1 auto; text-align:center; padding:.55rem .8rem;}
+}
+
+/* User Guide sticky header + anchor offset */
+.guide header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:#fff;
+  border-bottom:1px solid #e6edf3;
+  box-shadow:0 2px 12px rgba(0,0,0,.06);
+}
+.guide main section{ scroll-margin-top:72px; }
