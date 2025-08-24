@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>kBarcode User Guide – KraftedLogic</title>
+  <meta name="description" content="User guide and documentation for kBarcode Creator by KraftedLogic." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#233746;--teal:#12B6A6;--ink:#1b1f23;--muted:#6b7a86;--card:#fff;--bg:#f7f9fb}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+    header{background:#fff;border-bottom:1px solid #e6edf3}
+    .container{max-width:900px;margin:auto;padding:1rem 1.25rem}
+    .title{display:flex;gap:.75rem;align-items:center}
+    .title img{width:34px;height:34px}
+    h1{font-size:1.6rem;color:var(--navy);margin:.25rem 0}
+    nav a{margin-right:.75rem;color:var(--navy);text-decoration:none;font-weight:600}
+    nav a:hover{color:var(--teal)}
+    main{padding:1.25rem}
+    section{background:var(--card);border:1px solid #e8eef4;border-radius:14px;padding:1rem;margin:0 0 1rem;box-shadow:0 6px 24px rgba(35,55,70,.05)}
+    h2{color:var(--navy);margin:.25rem 0 .5rem}
+    ol,ul{margin:.35rem 0 .35rem 1.25rem}
+    code,kbd{background:#eef4f7;border-radius:6px;padding:.12rem .35rem}
+    footer{padding:2rem 0;color:#6d7782;text-align:center}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="title">
+        <img src="/logo.png" alt="KraftedLogic"/>
+        <h1>kBarcode User Guide</h1>
+      </div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="#install">Install</a>
+        <a href="#create">Create Codes</a>
+        <a href="#labels">Labels</a>
+        <a href="#import">CSV Import</a>
+        <a href="#license">License</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="intro">
+      <h2>Overview</h2>
+      <p><strong>kBarcode Creator</strong> lets you create barcodes and QR codes in bulk, design printable labels, and export high‑resolution PNG/PDF files. Ideal for small and medium businesses that need fast, accurate labeling and inventory control.</p>
+    </section>
+
+    <section id="install">
+      <h2>Install</h2>
+      <ol>
+        <li>Download the installer from your purchase email (or contact <a href="mailto:hello@kraftedlogic.com">hello@kraftedlogic.com</a>).</li>
+        <li>Run the installer and follow the prompts.</li>
+        <li>Launch <em>kBarcode</em> from the Start Menu (Windows).</li>
+      </ol>
+    </section>
+
+    <section id="create">
+      <h2>Create Barcodes & QR Codes</h2>
+      <ol>
+        <li>Click <strong>New</strong> → choose a symbology (e.g., QR, EAN‑13, Code‑128).</li>
+        <li>Enter the value or paste from clipboard.</li>
+        <li>Use <strong>Batch</strong> to create multiple codes at once.</li>
+        <li>Export as <strong>PNG</strong> or <strong>PDF</strong>.</li>
+      </ol>
+    </section>
+
+    <section id="labels">
+      <h2>Design & Print Labels</h2>
+      <ol>
+        <li>Open <strong>Labels</strong> → pick a template (Avery, custom size).</li>
+        <li>Drop your barcode/QR, add text fields (SKU, price, notes).</li>
+        <li>Preview and print, or export to PDF for your print shop.</li>
+      </ol>
+    </section>
+
+    <section id="import">
+      <h2>Import from CSV</h2>
+      <ol>
+        <li>Prepare a CSV with headers like <code>code,value,label</code>.</li>
+        <li>Click <strong>Import</strong> → select your file.</li>
+        <li>Map columns and confirm. Use <strong>Preview</strong> before export.</li>
+      </ol>
+    </section>
+
+    <section id="license">
+      <h2>License & Support</h2>
+      <ul>
+        <li>7‑day free trial. One‑time license includes 1‑year updates.</li>
+        <li>Transfer your license once per year if your machine changes.</li>
+        <li>Support: <a href="mailto:hello@kraftedlogic.com">hello@kraftedlogic.com</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <script>document.write(new Date().getFullYear())</script> KraftedLogic</div>
+  </footer>
+</body>
+</html>

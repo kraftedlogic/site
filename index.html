@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KraftedLogic – Where Craft Meets Logic</title>
+  <meta name="description" content="KraftedLogic builds high‑quality, practical software for small and medium businesses—custom apps, ready‑made tools, and outsourced IT divisions that reduce your running costs." />
+  <meta property="og:title" content="KraftedLogic" />
+  <meta property="og:description" content="Software crafted for real business—barcode tools, SME apps, and turnkey IT ops." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.png" />
+  <meta name="theme-color" content="#233746" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#233746; /* greenish navy from your logo */
+      --teal:#12B6A6;
+      --ink:#1b1f23;
+      --muted:#6b7a86;
+      --bg:#f7f9fb;
+      --card:#ffffff;
+      --ring: 0 0 0 3px rgba(18,182,166,.25);
+    }
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+    a{color:var(--navy);text-decoration:none}
+    a:hover{color:var(--teal)}
+    .container{max-width:1100px;margin-inline:auto;padding:0 1.25rem}
+    /* Header */
+    header{position:sticky;top:0;background:#fff;border-bottom:1px solid #e6edf3;z-index:30}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:.85rem 0}
+    .brand{display:flex;gap:.75rem;align-items:center}
+    .logo-mark{display:inline-block;width:38px;height:38px}
+    .logo-mark svg{width:100%;height:100%}
+    .brand h1{font-size:1.15rem;margin:0;letter-spacing:.2px;color:var(--navy);font-weight:700}
+    .nav a.btn{padding:.65rem 1rem;border-radius:10px;border:1px solid #d7e0e7;background:#fff;font-weight:600}
+    .nav a.btn.primary{background:var(--navy);color:#fff;border-color:var(--navy)}
+    .nav a.btn.primary:hover{background:#1c2a33}
+    /* Hero */
+    .hero{padding:5rem 0 3rem;background:linear-gradient(180deg,#fff,rgba(255,255,255,0.6)),radial-gradient(1200px 500px at 70% -10%, rgba(18,182,166,.08), transparent 60%)}
+    .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
+    .eyebrow{color:var(--teal);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem}
+    .title{font-size:clamp(2rem,5vw,3.2rem);line-height:1.06;color:var(--navy);margin:.5rem 0}
+    .subtitle{color:var(--muted);font-size:1.05rem;max-width:60ch}
+    .cta{margin-top:1.2rem;display:flex;gap:.75rem;flex-wrap:wrap}
+    .btn{padding:.85rem 1.1rem;border-radius:12px;border:1px solid #d7e0e7;background:#fff;font-weight:700}
+    .btn.primary{background:var(--navy);color:#fff;border-color:var(--navy)}
+    .btn.ghost{background:#fff}
+    .btn:focus-visible{outline:var(--ring)}
+    .hero-card{background:var(--card);border:1px solid #e8eef4;border-radius:18px;box-shadow:0 10px 40px rgba(35,55,70,.06);padding:1rem}
+    .hero-card img{width:100%;border-radius:12px;display:block}
+    /* Sections */
+    section{padding:3.2rem 0}
+    .section-title{font-weight:800;color:var(--navy);font-size:1.6rem;margin:0 0 1rem}
+    .grid{display:grid;gap:1.25rem}
+    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .card{background:var(--card);border:1px solid #e8eef4;border-radius:16px;padding:1.2rem;box-shadow:0 6px 28px rgba(35,55,70,.05)}
+    .card h3{margin:.25rem 0 .35rem;font-size:1.1rem;color:var(--navy)}
+    .card p{margin:0;color:#4e5b66}
+    .pill{display:inline-block;padding:.25rem .6rem;border-radius:999px;background:rgba(18,182,166,.1);color:var(--teal);font-weight:700;font-size:.8rem}
+    /* Process */
+    .steps{counter-reset:step;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+    .step{position:relative;background:var(--card);border:1px solid #e8eef4;border-radius:14px;padding:1rem;min-height:120px}
+    .step:before{counter-increment:step;content:counter(step);position:absolute;inset:12px auto auto 12px;background:var(--navy);color:#fff;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;font-weight:800}
+    /* Contact */
+    form{display:grid;gap:.75rem;margin-top:.5rem}
+    input,textarea{font:inherit;padding:.8rem .9rem;border:1px solid #d7e0e7;border-radius:12px;background:#fff}
+    textarea{min-height:120px;resize:vertical}
+    footer{padding:2.5rem 0;border-top:1px solid #e6edf3;color:#55616d;background:#fff}
+    .footgrid{display:grid;grid-template-columns:1fr auto;align-items:center}
+    .muted{color:#7a8996}
+    /* Responsive */
+    @media (max-width:960px){.hero .wrap{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}}
+    @media (max-width:640px){.grid.cols-3{grid-template-columns:1fr}.nav a.btn{display:none}.hero{padding:3.5rem 0 2rem}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="KraftedLogic home">
+        <!-- Swap this <span> for your final logo.svg if desired -->
+        <span class="logo-mark" aria-hidden="true">
+          <img src="/logo.svg" alt="KraftedLogic logo" width="38" height="38" style="display:block"/>
+        </span>
+        <h1 style="font-family:Merriweather,serif; font-weight:700; letter-spacing:.2px">KraftedLogic</h1>
+      </a>
+      <nav>
+        <a class="btn" href="#products">Products</a>
+        <a class="btn" href="#services">Services</a>
+        <a class="btn" href="#process">Process</a>
+        <a class="btn" href="#contact">Contact</a>
+        <a class="btn primary" href="mailto:hello@kraftedlogic.com">Start a Project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="hero">
+    <div class="container wrap">
+      <div>
+        <div class="eyebrow">Where Craft Meets Logic</div>
+        <h2 class="title">Software that runs your business—beautifully, reliably, affordably.</h2>
+        <p class="subtitle">We build practical, high‑quality applications for small and medium businesses: from barcode creators and inventory to custom line‑of‑business systems and full IT division outsourcing. Our goal is simple—<strong>lower your IT costs</strong>, raise your <strong>operational clarity</strong>.</p>
+        <div class="cta">
+          <a class="btn primary" href="#contact">Get a quote</a>
+          <a class="btn ghost" href="#services">See what we build</a>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="product preview">
+        <img alt="Clean dashboard mockup in KraftedLogic colors" src="https://images.unsplash.com/photo-1551281044-8d8eec338af3?q=80&w=1400&auto=format&fit=crop"/>
+      </div>
+    </div>
+  </main>
+
+  <section id="products">
+    <div class="container">
+      <h2 class="section-title">Products</h2>
+      <div class="grid cols-3">
+        <article class="card">
+          <span class="pill">Desktop • Windows</span>
+          <h3>kBarcode Creator</h3>
+          <p>Generate QR and barcodes in bulk, import CSVs, design printable labels, and export high‑resolution PNG/PDF. Includes 7‑day trial and one‑time license with 1‑year support.</p>
+          <p style="margin:.75rem 0 0"><a class="btn primary" href="#" aria-label="Buy kBarcode on Gumroad">Buy / Download</a> <a class="btn" href="#" aria-label="Read user guide">User Guide</a></p>
+        </article>
+        <article class="card">
+          <span class="pill">Web</span>
+          <h3>Inventory Lite (coming soon)</h3>
+          <p>Track stock, purchases, and sales with barcode scanning, alerts, and CSV import/export.</p>
+        </article>
+        <article class="card">
+          <span class="pill">Web</span>
+          <h3>Quotes & Invoicing (coming soon)</h3>
+          <p>Simple quoting, invoicing, payments, and customer statements—built for small teams.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">What we do</h2>
+      <div class="grid cols-3">
+        <article class="card">
+          <span class="pill">Ready‑made</span>
+          <h3>Barcode & Label Tools</h3>
+          <p>Create and manage barcodes, QR codes, and printable labels with CSV import/export and smart templates.</p>
+        </article>
+        <article class="card">
+          <span class="pill">Custom</span>
+          <h3>SMB Business Applications</h3>
+          <p>Inventory, POS, quotes & invoicing, lightweight CRM, service tickets—tailored to your exact workflows.</p>
+        </article>
+        <article class="card">
+          <span class="pill">Outsourced IT</span>
+          <h3>Turnkey IT Division</h3>
+          <p>We run your small‑to‑mid IT function—roadmaps, delivery, security, support—at a fraction of in‑house cost.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Why KraftedLogic?</h2>
+      <div class="grid cols-3">
+        <article class="card"><h3>Quality & Usefulness</h3><p>Everything we ship is built to last and built to matter. No bloat, just results.</p></article>
+        <article class="card"><h3>Cost Efficiency</h3><p>We optimize cloud, licensing, and support so you spend less every month.</p></article>
+        <article class="card"><h3>Grow With You</h3><p>APIs and modular design so your tools evolve as you scale.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" style="background:#fff">
+    <div class="container">
+      <h2 class="section-title">Simple, predictable process</h2>
+      <div class="steps">
+        <div class="step"><h3>Discovery</h3><p>Map goals, pain points, and success metrics.</p></div>
+        <div class="step"><h3>Design</h3><p>Low‑friction prototypes and clear specs.</p></div>
+        <div class="step"><h3>Build</h3><p>Iterative delivery with weekly demos.</p></div>
+        <div class="step"><h3>Run</h3><p>Hosting, monitoring, and friendly support.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Let’s talk</h2>
+      <p class="muted">Tell us what you’re trying to achieve. We’ll reply within one business day.</p>
+      <form action="https://formspree.io/f/xbldajyd" method="POST">
+        <!-- Replace the Formspree endpoint with your own when ready -->
+        <input name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input name="company" placeholder="Company (optional)" />
+        <textarea name="message" placeholder="What can we build or improve for you?" required></textarea>
+        <button class="btn primary" type="submit">Send message</button>
+        <p class="muted" style="margin:.35rem 0 0">Prefer email? Write to <a href="mailto:hello@kraftedlogic.com">hello@kraftedlogic.com</a></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footgrid">
+      <div class="brand">
+        <span class="logo-mark" aria-hidden="true">
+          <img src="/logo.svg" alt="KraftedLogic logo" width="38" height="38" style="display:block"/>
+        </span>
+        <strong style="color:var(--navy)">KraftedLogic</strong>
+      </div>
+      <small class="muted">© <span id="y"></span> KraftedLogic. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "KraftedLogic",
+      "url": "https://kraftedlogic.com/",
+      "logo": "https://kraftedlogic.com/favicon.svg",
+      "sameAs": []
+    }
+  </script>
+</body>
+</html>
